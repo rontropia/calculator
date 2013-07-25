@@ -25,7 +25,8 @@ td {
 #input {
 	text-align: right;
 	border: none;
-	font-size: 35px;
+	font-size: 40px;
+	height: 60px;
 }
 
 #equals {

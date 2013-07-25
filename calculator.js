@@ -1,5 +1,5 @@
-$(document).ready(function(){
-	$('#equals').on('click','td',function(){
-		alert('shit!');
-	});
+
+
+$("td").click(function(){
+	$('#input').text('test!');	
 });
