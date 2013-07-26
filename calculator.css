@@ -20,51 +20,19 @@ td {
 
 }
 
+#asteegDisplay {
+	text-align: right;
+	font-size: 12px;
+	height: 15px;
+	color: white;
+	background-color: black;
+}
+
 #display {
 	text-align: right;
 	border: none;
 	font-size: 50px;
 	height: 60px;
-}
-
-#eval {
-	background-color: #d2d2f9; 
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#d2d2f9), to(#a6a6f2));
-	background-image: -webkit-linear-gradient(top, #d2d2f9, #a6a6f2);
-	background-image: -moz-linear-gradient(top, #d2d2f9, #a6a6f2);
-	background-image: -ms-linear-gradient(top, #d2d2f9, #a6a6f2);
-	background-image: -o-linear-gradient(top, #d2d2f9, #a6a6f2);
-	background-image: linear-gradient(to bottom, #d2d2f9, #a6a6f2)
-}
-
-#eval:hover {
-	background-color: #a5a5f3; 
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#a5a5f3), to(#7a7aeb));
-	background-image: -webkit-linear-gradient(top, #a5a5f3, #7a7aeb);
-	background-image: -moz-linear-gradient(top, #a5a5f3, #7a7aeb);
-	background-image: -ms-linear-gradient(top, #a5a5f3, #7a7aeb);
-	background-image: -o-linear-gradient(top, #a5a5f3, #7a7aeb);
-	background-image: linear-gradient(to bottom, #a5a5f3, #7a7aeb);
-}
-
-#clear {
-	background-color: #d2d2f9; 
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#d2d2f9), to(#a6a6f2));
-	background-image: -webkit-linear-gradient(top, #d2d2f9, #a6a6f2);
-	background-image: -moz-linear-gradient(top, #d2d2f9, #a6a6f2);
-	background-image: -ms-linear-gradient(top, #d2d2f9, #a6a6f2);
-	background-image: -o-linear-gradient(top, #d2d2f9, #a6a6f2);
-	background-image: linear-gradient(to bottom, #d2d2f9, #a6a6f2);
-}
-
-#clear:hover {
-	background-color: #a5a5f3; 
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#a5a5f3), to(#7a7aeb));
-	background-image: -webkit-linear-gradient(top, #a5a5f3, #7a7aeb);
-	background-image: -moz-linear-gradient(top, #a5a5f3, #7a7aeb);
-	background-image: -ms-linear-gradient(top, #a5a5f3, #7a7aeb);
-	background-image: -o-linear-gradient(top, #a5a5f3, #7a7aeb);
-	background-image: linear-gradient(to bottom, #a5a5f3, #7a7aeb);
 }
 
 .uniqueButtons {

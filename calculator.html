@@ -9,17 +9,22 @@
 	</head>
 	<body>
 		<table data-input=''>
-			<caption><p>Calculator</p></caption> 
+			<caption><p>Calculator</p></caption>
+			<thead>
+				<tr>
+                    <td id="asteegDisplay" colspan="4"></td>
+                </tr>
+			</thead>
    			<tbody>
 				<tr>
-					<td id='display' colspan="4">
+					<td id="display" colspan="4">
 					</td>
 				</tr>
 				<tr>
 					<td class="buttons">(</td>
 					<td class="buttons">)</td>
 					<td class="uniqueButtons" id="del">del</td>
-					<td id="clear">Clear</td>
+					<td class="uniqueButtons" id="clear">Clear</td>
 				</tr>
 				<tr>
 					<td class="buttons">7</td>
@@ -42,7 +47,7 @@
 				<tr>
 					<td class="buttons">0</td>
 					<td class="buttons">.</td>
-					<td id="eval">=</td>
+					<td class="uniqueButtons" id="eval">=</td>
 					<td class="buttons">+</td>
 				</tr>
 			</tbody>
