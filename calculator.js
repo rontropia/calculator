@@ -3,9 +3,9 @@ $(document).ready(function(){
 		var prevInput = $('table').data('input');
 		var currentInput = $(this).text();
 
-		if((currentInput == '*') || (currentInput == '/') || (currentInput == '+') || (currentInput == '-'))
-			$('table').data('input',prevInput+' '+currentInput+' ');
-		else
+		//if((currentInput == '*') || (currentInput == '/') || (currentInput == '+') || (currentInput == '-'))
+		//	$('table').data('input',prevInput+' '+currentInput+' ');
+		//else
 			$('table').data('input',prevInput+''+currentInput);
 		//eto yung display
 		$('tbody').find('td').first().text($('table').data('input'));
