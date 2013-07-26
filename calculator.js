@@ -1,5 +1,7 @@
+$('#input').text('test!');	
 
+//$("td").click(function(){});
 
-$("td").click(function(){
+(function ($) {
 	$('#input').text('test!');	
-});
+})(jQuery);
