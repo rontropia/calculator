@@ -3,22 +3,23 @@
 	<head>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="calculator.css">
-		<script src="calculator.js"></script>
-		<script src="resources/jquery-2.0.3.min.js">
-		</script>
+		<script src="resources/jquery-2.0.3.min.js"></script>
+		<script type="text/javascript" src="calculator.js"></script>
+		
 	</head>
 	<body>
-		<table>
-			<caption>Calculator</caption> 
+		<table data-input=''>
+			<caption><p>Calculator</p></caption> 
    			<tbody>
 				<tr>
-					<td colspan="4"><input id="input" /></td>
+					<td id='display' colspan="4">
+					</td>
 				</tr>
 				<tr>
 					<td class="buttons">(</td>
 					<td class="buttons">)</td>
-					<td class="buttons">%</td>
-					<td class="buttons">AC</td>
+					<td class="uniqueButtons" id="del">del</td>
+					<td id="clear">Clear</td>
 				</tr>
 				<tr>
 					<td class="buttons">7</td>
@@ -41,7 +42,7 @@
 				<tr>
 					<td class="buttons">0</td>
 					<td class="buttons">.</td>
-					<td class="buttons" id="equals">=</td>
+					<td id="eval">=</td>
 					<td class="buttons">+</td>
 				</tr>
 			</tbody>
