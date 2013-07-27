@@ -1,3 +1,6 @@
+//keyboard focus will be handleed by the browser thus will not be a problem
+
+
 $(document).ready(function(){
 	$('.buttons').click(function(){
 		var prevInput = $('table').data('input');
@@ -23,5 +26,14 @@ $(document).ready(function(){
 			$('table').data('input',oldInput.substring(0,oldInput.length - 1));
 			$('tbody').find('td').first().text($('table').data('input'));
 		}
+	});
+	$('html').keypress(function(event){
+		//console.log(String.fromCharCode(event.which));
+		var prevInput = $('table').data('input');
+		var currentInput = String.fromCharCode(event.which);
+
+		$('table').data('input',prevInput+''+currentInput);
+		//eto yung display
+		$('tbody').find('td').first().text($('table').data('input'));
 	});
 });
