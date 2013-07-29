@@ -1,39 +1,65 @@
-//keyboard focus will be handleed by the browser thus will not be a problem
-
+//focus will be handled by the browser thus will not be a problem
 
 $(document).ready(function(){
-	$('.buttons').click(function(){
-		var prevInput = $('table').data('input');
-		var currentInput = $(this).text();
+	var gPrev = $('tbody').find('td').first().text();
+	var gInput;
+	var gOutput;
 
-		$('table').data('input',prevInput+''+currentInput);
+	$('.buttons').click(function(){
+		gInput = $(this).text();
+		gOutput = gPrev+gInput;
 		//eto yung display
-		$('tbody').find('td').first().text($('table').data('input'));
+		$('tbody').find('td').first().text(gOutput);
+		gPrev = gOutput;
+		gOutput = '';
+		gInput = '';
 	});
-	$('#eval').click(function(){
-		var userInput = $('table').data('input');
-		$('thead').find('td').first().text(userInput);
-		$('tbody').find('td').first().text(eval(userInput));
-	});
-	$('#clear').click(function(){
-		$('table').data('input','');
-		$('thead').find('td').first().text("");
-		$('tbody').find('td').first().text($('table').data('input'));
-	});
-	$('#del').click(function(){
-		var oldInput = $('table').data('input');
-		if(oldInput != null){
-			$('table').data('input',oldInput.substring(0,oldInput.length - 1));
-			$('tbody').find('td').first().text($('table').data('input'));
+	$('html').keydown(function(event){
+		if(event.which == 8){
+			$('#del').click();
 		}
 	});
 	$('html').keypress(function(event){
-		//console.log(String.fromCharCode(event.which));
-		var prevInput = $('table').data('input');
-		var currentInput = String.fromCharCode(event.which);
-
-		$('table').data('input',prevInput+''+currentInput);
-		//eto yung display
-		$('tbody').find('td').first().text($('table').data('input'));
+		if((event.which >= 40) && (event.which <=57)){
+			if(event.which != 44){
+				//console.log('yataaaa');
+				gInput = String.fromCharCode(event.which);
+				console.log(event.which);
+				gOutput = gPrev+gInput;
+				//eto yung display
+				$('tbody').find('td').first().text(gOutput);
+				gPrev = gOutput;
+				gOutput = '';
+				gInput = '';
+			}
+		}
+		if(event.which == 13){
+			$('#eval').click();
+		}
+		
+	});
+	$('#eval').click(function(){
+		try{
+			$('thead').find('td').first().text(gPrev);
+			$('tbody').find('td').first().text(eval(gPrev));
+		}catch(err){
+			alert('Syntax Error!');
+		}
+	});
+	$('#clear').click(function(){
+		$('thead').find('td').first().text('');
+		$('tbody').find('td').first().text('');
+		gPrev = '';
+		gOutput = '';
+		gInput = '';
+	});
+	$('#del').click(function(){
+		if(gPrev != null){
+			gOutput = gPrev.substring(0,gPrev.length - 1);
+			$('tbody').find('td').first().text(gOutput);
+		}
+		gPrev = gOutput;
+		gOutput = '';
+		gInput = '';
 	});
 });
