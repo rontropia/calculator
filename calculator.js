@@ -1,5 +1,6 @@
 //focus will be handled by the browser thus will not be a problem
 
+
 $(document).ready(function(){
 	var gPrev = $('tbody').find('td').first().text();
 	var gInput;
@@ -24,7 +25,6 @@ $(document).ready(function(){
 			if(event.which != 44){
 				//console.log('yataaaa');
 				gInput = String.fromCharCode(event.which);
-				console.log(event.which);
 				gOutput = gPrev+gInput;
 				//eto yung display
 				$('tbody').find('td').first().text(gOutput);
@@ -43,7 +43,7 @@ $(document).ready(function(){
 			$('thead').find('td').first().text(gPrev);
 			$('tbody').find('td').first().text(eval(gPrev));
 		}catch(err){
-			alert('Syntax Error!');
+			console.log('Syntax Error!');
 		}
 	});
 	$('#clear').click(function(){
