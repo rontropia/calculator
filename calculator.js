@@ -6,7 +6,7 @@ $(document).ready(function(){
 	var gInput;
 	var gOutput;
 
-	$('.buttons').click(function(){
+	$('.button').click(function(){
 		gInput = $(this).text();
 		gOutput = gPrev+gInput;
 		//eto yung display

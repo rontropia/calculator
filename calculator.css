@@ -98,7 +98,7 @@ td {
 	background-image: linear-gradient(to bottom, #a5a5f3, #7a7aeb);
 }
 
-.buttons {
+.button {
 	background-image: -webkit-linear-gradient(top, #f4f5f5, #dfdddd);
 	background-image: -moz-linear-gradient(top, #f4f5f5, #dfdddd);
 	background-image: -ms-linear-gradient(top, #f4f5f5, #dfdddd);
@@ -106,7 +106,7 @@ td {
 	background-image: linear-gradient(to bottom, #f4f5f5, #dfdddd);
 }
 
-.buttons:hover{
+.button:hover{
  border:1px solid #bfc4c4;
  background-color: #d9dddd; 
  background-image: -webkit-gradient(linear, left top, left bottom, from(#d9dddd), to(#c6c3c3));
