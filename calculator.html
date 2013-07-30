@@ -5,14 +5,13 @@
 		<link rel="stylesheet" href="calculator.css">
 		<script src="resources/jquery-2.0.3.min.js"></script>
 		<script type="text/javascript" src="calculator.js"></script>
-		
 	</head>
 	<body>
 		<table>
 			<caption>Calculator by Rolianne</caption>
 			<thead>
 				<tr>
-                    <td id="prevDisplay" colspan="4"></td>
+                    <td id="previous_display" colspan="4"></td>
                 </tr>
 			</thead>
    			<tbody>
@@ -20,34 +19,34 @@
 					<td colspan="4"><textarea id="display" readonly></textarea></td>
 				</tr>
 				<tr>
-					<td class="button" id="operator">(</td>
-					<td class="button" id="operator">)</td>
-					<td class="uniqueButtons" id="del">&lt;&lt;</td>
-					<td class="uniqueButtons" id="clear">ac</td>
+					<td class="button operator">(</td>
+					<td class="button operator">)</td>
+					<td class="action" id="del">&lt;&lt;</td>
+					<td class="action" id="clear">ac</td>
 				</tr>
 				<tr>
 					<td class="button">7</td>
 					<td class="button">8</td>
 					<td class="button">9</td>
-					<td class="button" id="operator">/</td>
+					<td class="button operator">/</td>
 				</tr>
 				<tr>
 					<td class="button">4</td>
 					<td class="button">5</td>
 					<td class="button">6</td>
-					<td class="button" id="operator">*</td>
+					<td class="button operator">*</td>
 				</tr>
 				<tr>
 					<td class="button">1</td>
 					<td class="button">2</td>
 					<td class="button">3</td>
-					<td class="button" id="operator">-</td>
+					<td class="button operator">-</td>
 				</tr>
 				<tr>
 					<td class="button">0</td>
 					<td class="button">.</td>
-					<td class="uniqueButtons" id="eval">=</td>
-					<td class="button" id="operator">+</td>
+					<td class="action" id="eval">=</td>
+					<td class="button operator">+</td>
 				</tr>
 			</tbody>
 		</table>

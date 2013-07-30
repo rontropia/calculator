@@ -1,19 +1,13 @@
-//focus will be handled by the browser thus will not be a problem
-
-
 $(document).ready(function(){
-	var gPrev = $('tbody').find('td').first().text();
-	var gInput;
-	var gOutput;
+	var previous_equation = $('tbody').find('td').first().text();
 
 	$('.button').click(function(){
-		gInput = $(this).text();
-		gOutput = gPrev+gInput;
-		//eto yung display
-		$('#display').text(gOutput);
-		gPrev = gOutput;
-		gOutput = '';
-		gInput = '';
+		if(previous_equation != null){
+			gInput = $(this).text();
+			gOutput = previous_equation+gInput;
+			$('#display').text(gOutput);
+			previous_equation = gOutput;	
+		}
 	});
 	$('html').keydown(function(event){
 		if(event.which == 8){
@@ -23,39 +17,32 @@ $(document).ready(function(){
 	$('html').keypress(function(event){
 		if((event.which >= 40) && (event.which <=57) && (event.which != 44)){
 			gInput = String.fromCharCode(event.which);
-			gOutput = gPrev+gInput;
-			//eto yung display
+			gOutput = previous_equation+gInput;
 			$('#display').text(gOutput);
-			gPrev = gOutput;
-			gOutput = '';
-			gInput = '';
+			previous_equation = gOutput;
 		}else if(event.which == 13){
 			$('#eval').click();
 		}
 	});
 	$('#eval').click(function(){
 		try{
-			gPrev = gPrev.replace(/^0+/, '');
-			$('thead').find('td').first().text(gPrev);
-			$('#display').text(eval(gPrev));
+			previous_equation = previous_equation.replace(/^0+/, '');
+			$('thead').find('td').first().text(previous_equation);
+			$('#display').text(eval(previous_equation));
 		}catch(err){
-			console.log('Syntax Error!');
+			$('thead').find('td').first().text('Syntax Error! '+err);
 		}
 	});
 	$('#clear').click(function(){
 		$('thead').find('td').first().text('');
 		$('#display').text('');
-		gPrev = '';
-		gOutput = '';
-		gInput = '';
+		previous_equation = '';
 	});
 	$('#del').click(function(){
-		if(gPrev != null){
-			gOutput = gPrev.substring(0,gPrev.length - 1);
+		if(previous_equation != null){
+			gOutput = previous_equation.substring(0,previous_equation.length - 1);
 			$('#display').text(gOutput);
 		}
-		gPrev = gOutput;
-		gOutput = '';
-		gInput = '';
+		previous_equation = gOutput;
 	});
 });
