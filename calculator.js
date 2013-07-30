@@ -35,6 +35,7 @@ $(document).ready(function(){
 	});
 	$('#eval').click(function(){
 		try{
+			gPrev = gPrev.replace(/^0+/, '');
 			$('thead').find('td').first().text(gPrev);
 			$('#display').text(eval(gPrev));
 		}catch(err){
