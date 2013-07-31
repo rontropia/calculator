@@ -4,6 +4,7 @@ $(document).ready(function(){
 	$('.button').click(function(){
 		if(previous_equation != null){
 			gInput = $(this).text();
+			console.log(this);
 			gOutput = previous_equation+gInput;
 			$('#display').text(gOutput);
 			previous_equation = gOutput;	
@@ -25,13 +26,17 @@ $(document).ready(function(){
 		}
 	});
 	$('#eval').click(function(){
-		try{
-			previous_equation = previous_equation.replace(/^0+/, '');
-			$('thead').find('td').first().text(previous_equation);
-			$('#display').text(eval(previous_equation));
-		}catch(err){
-			$('thead').find('td').first().text('Syntax Error! '+err);
-		}
+		previous_equation = previous_equation.replace("*"," * ").replace("/"," / ").replace("+"," + ").replace("-"," - ").replace("("," ( ").replace(")"," ) ")
+		var unprocessedInput = previous_equation.split(" ");
+		$.each(unprocessedInput,function(index,element){
+			if((element != '*')||(element != '/')||(element != '+')||(element != '-')||(element != '(')||(element != ')')){
+				//console.log('shit just got real!');
+				unprocessedInput[index] = element.replace(/^0+/, '');
+			}
+		});
+		var processedInput = unprocessedInput.join('');
+		$('thead').find('td').first().text(processedInput);
+		$('#display').text(eval(processedInput));
 	});
 	$('#clear').click(function(){
 		$('thead').find('td').first().text('');
