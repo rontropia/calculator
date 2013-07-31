@@ -36,7 +36,8 @@ $(document).ready(function(){
 		});
 		var processedInput = unprocessedInput.join('');
 		$('thead').find('td').first().text(processedInput);
-		$('#display').text(eval(processedInput));
+		previous_equation = eval(processedInput)
+		$('#display').text(previous_equation);
 	});
 	$('#clear').click(function(){
 		$('thead').find('td').first().text('');
@@ -45,7 +46,8 @@ $(document).ready(function(){
 	});
 	$('#del').click(function(){
 		if(previous_equation != null){
-			gOutput = previous_equation.substring(0,previous_equation.length - 1);
+			var stringEquation = String(previous_equation);
+			gOutput = stringEquation.substring(0,stringEquation.length - 1);
 			$('#display').text(gOutput);
 		}
 		previous_equation = gOutput;
