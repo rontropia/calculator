@@ -1,7 +1,6 @@
 body {
 	background-color: #ffd65e; 
 }
-
 table {
 	margin-top: 100px;
 	margin-right: auto;
@@ -9,16 +8,13 @@ table {
 	border: 3px solid black;
 	text-align: center;
 	background-color: black;
-
 	-webkit-box-shadow: 2px 2px 4px #000;
 	-moz-box-shadow: 2px 2px 4px #000;
 	box-shadow: 2px 2px 4px #000;
-
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	border-radius: 10px;
 }
-
 td {
 	border: 1px solid black;
 	-webkit-border-radius: 5px;
@@ -30,9 +26,7 @@ td {
 	margin: 5px 5px 5px 5px;
 	font-size: 20px;
 	text-shadow: 1px 1px 1px #000;
-
 }
-
 #previous_display {
 	text-align: right;
 	font-size: 12px;
@@ -40,7 +34,6 @@ td {
 	color: white;
 	background-color: black;
 }
-
 #display {
 	text-align: right;
 	margin-top: 5px;
@@ -51,7 +44,6 @@ td {
 	resize: none;
 	overflow: auto;
 }
-
 .button.operator {
 	background-color: #ffd65e; 
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#ffd65e), to(#febf04));
@@ -60,7 +52,6 @@ td {
 	background-image: -ms-linear-gradient(top, #ffd65e, #febf04);
 	background-image: -o-linear-gradient(top, #ffd65e, #febf04);
 }
-
 .button.operator:hover {
 	background-color: #ffc92b; 
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#ffc92b), to(#ce9a01));
@@ -69,7 +60,6 @@ td {
 	background-image: -ms-linear-gradient(top, #ffc92b, #ce9a01);
 	background-image: -o-linear-gradient(top, #ffc92b, #ce9a01);
 }
-
 .action {
 	background-color: #d2d2f9; 
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#d2d2f9), to(#a6a6f2));
@@ -78,7 +68,6 @@ td {
 	background-image: -ms-linear-gradient(top, #d2d2f9, #a6a6f2);
 	background-image: -o-linear-gradient(top, #d2d2f9, #a6a6f2);
 }
-
 .action:hover {
 	background-color: #a5a5f3; 
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#a5a5f3), to(#7a7aeb));
@@ -87,14 +76,12 @@ td {
 	background-image: -ms-linear-gradient(top, #a5a5f3, #7a7aeb);
 	background-image: -o-linear-gradient(top, #a5a5f3, #7a7aeb);
 }
-
 .button {
 	background-image: -webkit-linear-gradient(top, #f4f5f5, #dfdddd);
 	background-image: -moz-linear-gradient(top, #f4f5f5, #dfdddd);
 	background-image: -ms-linear-gradient(top, #f4f5f5, #dfdddd);
 	background-image: -o-linear-gradient(top, #f4f5f5, #dfdddd);
 }
-
 .button:hover{
  background-color: #d9dddd; 
  background-image: -webkit-gradient(linear, left top, left bottom, from(#d9dddd), to(#c6c3c3));

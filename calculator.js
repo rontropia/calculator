@@ -1,6 +1,5 @@
 $(document).ready(function(){
 	var previous_equation = $('tbody').find('td').first().text();
-
 	$('.button').click(function(){
 		if(previous_equation != null){
 			gInput = $(this).text();
