@@ -34,8 +34,13 @@ $(document).ready(function(){
 			}
 		});
 		var processedInput = unprocessedInput.join('');
-		$('thead').find('td').first().text(processedInput);
-		previous_equation = eval(processedInput)
+		try{
+			previous_equation = eval(processedInput)
+			$('thead').find('td').first().text(processedInput);
+		}catch(err){
+			$('thead').find('td').first().text("Syntax Error!");
+			previous_equation = processedInput;
+		}
 		$('#display').text(previous_equation);
 	});
 	$('#clear').click(function(){
