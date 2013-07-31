@@ -30,7 +30,7 @@ $(document).ready(function(){
 		$.each(unprocessedInput,function(index,element){
 			if((element != '*')||(element != '/')||(element != '+')||(element != '-')||(element != '(')||(element != ')')){
 				//console.log('shit just got real!');
-				unprocessedInput[index] = element.replace(/^0+/, '');
+				unprocessedInput[index] = element.replace(/^0{2}/, '');
 			}
 		});
 		var processedInput = unprocessedInput.join('');
